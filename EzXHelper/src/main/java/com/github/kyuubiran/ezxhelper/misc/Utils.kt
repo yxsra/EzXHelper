@@ -35,10 +35,31 @@ object Utils {
     @JvmStatic
     fun ClassLoader.getAllClassesList(delegator: (BaseDexClassLoader) -> BaseDexClassLoader = { loader -> loader }): List<String> =
         findDexClassLoader(delegator)?.let {
-            val f = BaseDexClassLoader::class.java.getDeclaredField("pathList").also { f -> f.isAccessible = true }
+            val f = BaseDexClassLoader::class.java.getDeclaredField("pathList")
+                .also { f -> f.isAccessible = true }
             f.get(it)
         }?.let {
-            val f = it::class.java.getDeclaredField("dexElements").also { f -> f.isAccessible = true }
+            val f =
+                it::class.java.getDeclaredField("dexElements").also { f -> f.isAccessible = true }
+            f.get(it) as Array<Any>?
+        }?.flatMap {
+            val f = it::class.java.getDeclaredField("dexFile").also { f -> f.isAccessible = true }
+            val df = f.get(it) ?: return@flatMap emptyList<String>()
+            val m = df::class.java.getDeclaredMethod("entries").also { m -> m.isAccessible = true }
+            (m.invoke(df) as Enumeration<String>?)?.toList().orEmpty()
+        }.orEmpty()
+
+    @Suppress("UNCHECKED_CAST")
+    @SuppressLint("DiscouragedPrivateApi")
+    @JvmStatic
+    fun BaseDexClassLoader.getAllClassesList(): List<String> =
+        this.let {
+            val f = BaseDexClassLoader::class.java.getDeclaredField("pathList")
+                .also { f -> f.isAccessible = true }
+            f.get(it)
+        }?.let {
+            val f =
+                it::class.java.getDeclaredField("dexElements").also { f -> f.isAccessible = true }
             f.get(it) as Array<Any>?
         }?.flatMap {
             val f = it::class.java.getDeclaredField("dexFile").also { f -> f.isAccessible = true }

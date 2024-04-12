@@ -545,6 +545,79 @@ public final class com/github/kyuubiran/ezxhelper/TypesKt {
 public abstract interface annotation class com/github/kyuubiran/ezxhelper/annotations/KotlinOnly : java/lang/annotation/Annotation {
 }
 
+public final class com/github/kyuubiran/ezxhelper/finders/ClassFinder : com/github/kyuubiran/ezxhelper/finders/base/BaseFinder {
+	public static final field Static Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder$Static;
+	public synthetic fun <init> (Lkotlin/sequences/Sequence;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun filterHasConstructorCount (I)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasConstructorCountIn ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasConstructorCountIn (I)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasConstructorCountIn (II)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasConstructorCountIn (Lkotlin/ranges/IntRange;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static synthetic fun filterHasConstructorCountIn$default (Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;IIILjava/lang/Object;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasConstructorSignature ([Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasFieldName (Ljava/lang/String;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasFieldType (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasFieldTypeAndCount (Ljava/lang/Class;I)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasFieldTypeAndCountIn (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasFieldTypeAndCountIn (Ljava/lang/Class;I)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasFieldTypeAndCountIn (Ljava/lang/Class;II)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasFieldTypeAndCountIn (Ljava/lang/Class;Lkotlin/ranges/IntRange;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static synthetic fun filterHasFieldTypeAndCountIn$default (Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;Ljava/lang/Class;IIILjava/lang/Object;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasFieldTypeName (Ljava/lang/String;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasMethodName (Ljava/lang/String;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasMethodReturnType (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterHasMethodSignature (Ljava/lang/Class;[Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterImplementInterfaces ([Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsAbstract ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsAnnotation ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsAnnotationPresent (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsAnonymous ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsArray ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsEnum ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsFinal ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsInterface ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsLocal ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsMember ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotAbstract ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotAnnotation ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotAnnotationPresent (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotAnonymous ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotArray ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotEnum ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotFinal ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotInterface ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotLocal ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotMember ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotPrimitive ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotPublic ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsNotSynthetic ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsPrimitive ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsPublic ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsSubclassOf (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterIsSynthetic ()Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun filterPackage (Ljava/lang/String;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static final fun fromArray ([Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static final fun fromClassloader (Ljava/lang/ClassLoader;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static final fun fromClassloader (Ljava/lang/ClassLoader;Lkotlin/jvm/functions/Function1;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static final fun fromIterable (Ljava/lang/Iterable;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static final fun fromSequence (Lkotlin/sequences/Sequence;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public fun getName ()Ljava/lang/String;
+	public static final fun of (Ljava/lang/ClassLoader;[Ljava/lang/String;)V
+	public static final fun of ([Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+}
+
+public final class com/github/kyuubiran/ezxhelper/finders/ClassFinder$Static {
+	public final fun fromArray ([Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun fromClassloader (Ljava/lang/ClassLoader;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun fromClassloader (Ljava/lang/ClassLoader;Lkotlin/jvm/functions/Function1;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static synthetic fun fromClassloader$default (Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder$Static;Ljava/lang/ClassLoader;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun fromIterable (Ljava/lang/Iterable;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun fromSequence (Lkotlin/sequences/Sequence;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public final fun of (Ljava/lang/ClassLoader;[Ljava/lang/String;)V
+	public final fun of ([Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder;
+	public static synthetic fun of$default (Lcom/github/kyuubiran/ezxhelper/finders/ClassFinder$Static;Ljava/lang/ClassLoader;[Ljava/lang/String;ILjava/lang/Object;)V
+}
+
 public final class com/github/kyuubiran/ezxhelper/finders/ConstructorFinder : com/github/kyuubiran/ezxhelper/finders/base/ExecutableFinder {
 	public static final field -Static Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder$-Static;
 	public synthetic fun <init> (Lkotlin/sequences/Sequence;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
@@ -833,6 +906,7 @@ public final class com/github/kyuubiran/ezxhelper/misc/Utils {
 	public static final field INSTANCE Lcom/github/kyuubiran/ezxhelper/misc/Utils;
 	public static final fun findDexClassLoader (Ljava/lang/ClassLoader;Lkotlin/jvm/functions/Function1;)Ldalvik/system/BaseDexClassLoader;
 	public static synthetic fun findDexClassLoader$default (Ljava/lang/ClassLoader;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ldalvik/system/BaseDexClassLoader;
+	public static final fun getAllClassesList (Ldalvik/system/BaseDexClassLoader;)Ljava/util/List;
 	public static final fun getAllClassesList (Ljava/lang/ClassLoader;Lkotlin/jvm/functions/Function1;)Ljava/util/List;
 	public static synthetic fun getAllClassesList$default (Ljava/lang/ClassLoader;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/util/List;
 	public final fun getMEMBER_MODIFIER_STRING_MAP ()Ljava/util/Map;
