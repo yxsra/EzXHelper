@@ -133,6 +133,54 @@ abstract class BaseFinder<T, Self>(protected var sequence: Sequence<T>) : INamed
         return if (o == null) null else this as Self
     }
 
+    @Throws(IllegalStateException::class)
+    fun requireCount(count: Int) = applyThis {
+        if (sequence.count() != count) {
+            throw IllegalStateException("The count of sequence is not $count")
+        }
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    fun requireCountOrNull(count: Int): Self? {
+        return if (sequence.count() == count) this as Self else null
+    }
+
+    @Throws(IllegalStateException::class)
+    fun requireCount(condition: T.() -> Boolean, count: Int) = applyThis {
+        if (sequence.count(condition) != count) {
+            throw IllegalStateException("The count of sequence is not $count")
+        }
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    fun requireCountOrNull(condition: T.() -> Boolean, count: Int): Self? {
+        return if (sequence.count(condition) == count) this as Self else null
+    }
+
+    @Throws(IllegalStateException::class)
+    fun requireCount(range: IntRange) = applyThis {
+        if (sequence.count() !in range) {
+            throw IllegalStateException("The count of sequence is not in $range")
+        }
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    fun requireCountOrNull(range: IntRange): Self? {
+        return if (sequence.count() in range) this as Self else null
+    }
+
+    @Throws(IllegalStateException::class)
+    fun requireCount(condition: T.() -> Boolean, range: IntRange) = applyThis {
+        if (sequence.count(condition) !in range) {
+            throw IllegalStateException("The count of sequence is not in $range")
+        }
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    fun requireCountOrNull(condition: T.() -> Boolean, range: IntRange): Self? {
+        return if (sequence.count(condition) in range) this as Self else null
+    }
+
     /**
      * Get the single element or throw an exception if there is no such element or more than one element.
      */

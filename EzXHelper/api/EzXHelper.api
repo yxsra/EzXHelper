@@ -757,6 +757,14 @@ public abstract class com/github/kyuubiran/ezxhelper/finders/base/BaseFinder : c
 	public final fun plusAssign (Ljava/lang/Iterable;)V
 	public final fun plusAssign (Lkotlin/sequences/Sequence;)V
 	public final fun plusAssign ([Ljava/lang/Object;)V
+	public final fun requireCount (I)Ljava/lang/Object;
+	public final fun requireCount (Lkotlin/jvm/functions/Function1;I)Ljava/lang/Object;
+	public final fun requireCount (Lkotlin/jvm/functions/Function1;Lkotlin/ranges/IntRange;)Ljava/lang/Object;
+	public final fun requireCount (Lkotlin/ranges/IntRange;)Ljava/lang/Object;
+	public final fun requireCountOrNull (I)Ljava/lang/Object;
+	public final fun requireCountOrNull (Lkotlin/jvm/functions/Function1;I)Ljava/lang/Object;
+	public final fun requireCountOrNull (Lkotlin/jvm/functions/Function1;Lkotlin/ranges/IntRange;)Ljava/lang/Object;
+	public final fun requireCountOrNull (Lkotlin/ranges/IntRange;)Ljava/lang/Object;
 	public final fun requireSingle ()Ljava/lang/Object;
 	public final fun requireSingle (Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
 	public final fun requireSingleOrNull ()Ljava/lang/Object;
